@@ -10,10 +10,10 @@ public class SingleSendProtocol extends BaseSendProtocol {
     private short command;
     private byte[] bytes;
 
-    public SingleSendProtocol(short command, byte param) {
+    /*public SingleSendProtocol(short command, byte param) {
         this.command = command;
         this.bytes = new byte[]{param};
-    }
+    }*/
 
     public SingleSendProtocol(short command) {
         this.command = command;

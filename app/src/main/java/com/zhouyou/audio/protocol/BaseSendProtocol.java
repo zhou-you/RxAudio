@@ -42,7 +42,6 @@ public abstract class BaseSendProtocol {
         allSendBuff.get(sourceBytes);
         byte[] crcBytes = new byte[len - 1];//第一个不参与crc校验
         System.arraycopy(sourceBytes, 1, crcBytes, 0, crcBytes.length);
-        
         // 写入crc检验码
         byte crc = CRCUtil.calcCrc8(crcBytes);
         allSendBuff.compact();

@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RxAudio</string>
+    <string name="water_msg">水份：%1$6.1f 油份：%2$6.1f</string>
+</resources>

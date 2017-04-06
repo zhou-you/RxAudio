@@ -1,0 +1,15 @@
+*.iml
+.gradle
+/local.properties
+/.idea/workspace.xml
+/.idea/libraries
+.idea
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+/.idea/
+RxAudio/src/androidTest/
+RxAudio/src/main/res/drawable/
+RxAudio/src/test/
+app/src/main/res/drawable/

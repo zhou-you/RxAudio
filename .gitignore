@@ -13,3 +13,4 @@ RxAudio/src/androidTest/
 RxAudio/src/main/res/drawable/
 RxAudio/src/test/
 app/src/main/res/drawable/
+/app/src/main/java/com/zhouyou/audio/demo/decoder/FSKDecoderData1.java

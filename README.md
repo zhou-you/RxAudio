@@ -1,13 +1,13 @@
 ## RxAudio
 
 基于Rxjava实现的android音频库,主要用于手机和音频设备之间通信，支持录音、发送、供电、发送失败自动重试（可以指定重试次数），设置接收超时、自定义编解码，自定义配置参数等功能，使用本库只需要关注与业务相关的自定义编解码。
- 
 ## 版本说明
-####当前版本
+
+#### 当前版本
 
 - V1.0.2 增加了耳机孔插入监听
 
-####历史版本
+#### 历史版本
 - V1.0.1 初始版本
 
 ##  用法介绍
@@ -122,7 +122,7 @@ rxAudio.send(bytes, new ICallBack() {
 ```
 rxAudio.exitAudio();
 ```
-####编解码使用方式
+#### 编解码使用方式
 全局设置
 ```
 RxAudio.init(new RxAudio.AudioConfig()
@@ -136,7 +136,7 @@ rxAudio.setAbstractDecoder(new FSKDecoderData());//设置解码
 rxAudio.setAudioEncoder(new EncoderData());//设置解码
 ```
 
-####自定义解码
+#### 自定义解码
 
 本库中默认采用FSKDecoderData解码，如果需要自定义实现解码需要继承AbstractDecoder类
 
@@ -194,7 +194,7 @@ RxAudio rxAudio = RxAudio.getInstance();
 rxAudio.setAbstractDecoder(new CustomDecoder());//设置解码
 ```
 
-##自定义编码
+## 自定义编码
 
 本库中默认采用EncoderData编码后发送给设备，如果需要自定义实现解码需要实现IAudioEncoder接口
 ```
@@ -224,7 +224,7 @@ public class CustomEncoder implements RxAudioPlayer.IAudioEncoder{
 RxAudio rxAudio = RxAudio.getInstance();
 rxAudio.setAudioEncoder(new CustomEncoder());//设置编码
 ```
-##其它场景使用
+## 其它场景使用
 以上所有实现都是主要围绕RxAudio来说明，RxAudio是集合了供电、录音、发送三大模块实现，每个模块也可独立使用。
 供电PowerSupply类
 ```
@@ -268,15 +268,15 @@ audioPlayer.rxSend((byte) 0x5A, 2, 100)//发送单个数据，失败重试2次�
 audioPlayer.rxSend(new byte[], 2, 100)//发送数组，失败重试2次，每次间隔100ms
 ```
 
-##RxAudio讲解
+## RxAudio讲解
 
 RxAudio是本库的一个音频入口类具有供电、接收、发送三大能。
 
-####使用方式
+#### 使用方式
 
 RxAudio rxAudio = RxAudio.getInstance();
 
-####功能介绍
+#### 功能介绍
 
 初始化配置
 
@@ -413,17 +413,17 @@ mAudioPlayerBuilder = new RxAudioPlayer.Builder().streamType(AudioManager.STREAM
 ```
 注：这些参数不需要关系，RxAudio默认已经设置了，如果需要自定义可以设置Builder.
 
-##Demo效果预览
-![](http://img.blog.csdn.net/20170407143348864)
+## Demo效果预览
+![](http://img.blog.csdn.net/20170407170949970)
 ##项目应用效果预览
-![](http://img.blog.csdn.net/20170407143528803)
+![](http://img.blog.csdn.net/20170407172312631)
 
-##重点说明
+## 重点说明
 - 本工程的Demo编解码都是空实现，因为编解码在其它app上已经商用，涉及到具体的业务通信安全，不对外开放，望理解！！！采用FSK，傅里叶FFT解码，能够兼容市场上主流手机80%以上，另外告知大家曼彻斯特的解码是行不通的（只有ios可以），勿走弯路，FFT才是正道（andoid和ios同时兼容），FFT同样也需要做兼容处理。
 - 供电说明，供电并不是真正的供电，音频设备如果想真正的供电最少需要在2.5V以上才能够稳定，ios可以输出3.5V的电压，anroid输出最好的也才在1.9V左右，很多手机只有1v左右，根本达不到供电的标注。很多希望供电是因为，如果耳机孔输出能够供电，那么耳机孔设备就不用加电池会减少很多成本。但是实际测试在android上不行的，本库中供电是当耳机孔插入时开始发送人耳听不到的21KHZ正玄波用最大振幅输出，以此来打开耳机孔设备电池的使能，耳机孔开始工作，拔出时断开使能不工作，增加耳机孔电池使用寿命。
 
 
-##其它
+## 其它
 如果想深入了解基于FFT的解码以及兼容、注意事项、供电、发送等原理，后期会在CSDN上发表博客，敬请期待！！
 
 

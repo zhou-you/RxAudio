@@ -1,4 +1,4 @@
-package com.zhouyou.audio.receiver;
+package com.zhouyou.audio.demo.receiver;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.media.AudioManager;
 import com.zhouyou.audio.RxAudio;
 import com.zhouyou.audio.decoder.DecoderResult;
 import com.zhouyou.audio.decoder.IDecoderCallBack;
-import com.zhouyou.audio.protocol.SkinTestingProtocol;
+import com.zhouyou.audio.demo.protocol.SkinTestingProtocol;
 import com.zhouyou.audio.util.AudioLog;
 import com.zhouyou.audio.util.AudioVolume;
 import com.zhouyou.audio.util.RxSchedulers;
@@ -29,7 +29,7 @@ import rx.subjects.PublishSubject;
  * 版本： v2.0<br>
  */
 public class HeadsetPlugReceiver extends BroadcastReceiver {
-    private static HeadsetPlugReceiver headsetPlugReceiver;
+    private static HeadsetPlugReceiver headPlugReceiver;
     private WeakReference<Context> contextWeakReference;
     private HeadsetJackStateLisentener headsetJackStateLisentener;
     private PublishSubject publishSubject = PublishSubject.create();
@@ -40,10 +40,10 @@ public class HeadsetPlugReceiver extends BroadcastReceiver {
     private String[] brands = {"Xiaomi", "HUAWEI",/*"ZTE",*//*"Lenovo A850"*/};//兼容处理
 
     public static HeadsetPlugReceiver getInstance(Context context) {
-        if (headsetPlugReceiver == null) {
-            headsetPlugReceiver = new HeadsetPlugReceiver(context);
+        if (headPlugReceiver == null) {
+            headPlugReceiver = new HeadsetPlugReceiver(context);
         }
-        return headsetPlugReceiver;
+        return headPlugReceiver;
     }
 
     private HeadsetPlugReceiver(Context context) {
@@ -156,7 +156,7 @@ public class HeadsetPlugReceiver extends BroadcastReceiver {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(Intent.ACTION_HEADSET_PLUG);
         intentFilter.addAction(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
-        contextWeakReference.get().registerReceiver(headsetPlugReceiver, intentFilter);
+        contextWeakReference.get().registerReceiver(headPlugReceiver, intentFilter);
     }
 
     /**
@@ -164,7 +164,7 @@ public class HeadsetPlugReceiver extends BroadcastReceiver {
      */
     public void unregisterHeadSetReceiver() {
         if (contextWeakReference.get() == null) return;
-        contextWeakReference.get().unregisterReceiver(headsetPlugReceiver);
+        contextWeakReference.get().unregisterReceiver(headPlugReceiver);
     }
 
     /**

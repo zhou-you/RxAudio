@@ -1,4 +1,4 @@
-package com.zhouyou.audio.encoder;
+package com.zhouyou.audio.demo.encoder;
 
 import com.zhouyou.audio.track.RxAudioPlayer;
 import com.zhouyou.audio.util.AudioLog;

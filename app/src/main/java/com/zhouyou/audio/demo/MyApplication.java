@@ -4,8 +4,8 @@ import android.app.Application;
 import android.widget.Toast;
 
 import com.zhouyou.audio.RxAudio;
-import com.zhouyou.audio.decoder.FSKDecoderData;
-import com.zhouyou.audio.encoder.EncoderData;
+import com.zhouyou.audio.demo.decoder.FSKDecoderData;
+import com.zhouyou.audio.demo.encoder.EncoderData;
 import com.zhouyou.audio.record.AudioRecorder;
 
 /**

@@ -1,5 +1,7 @@
-package com.zhouyou.audio.decoder;
+package com.zhouyou.audio.demo.decoder;
 
+import com.zhouyou.audio.decoder.AbstractDecoder;
+import com.zhouyou.audio.decoder.DecoderResult;
 import com.zhouyou.audio.util.AudioLog;
 import com.zhouyou.audio.util.CRCUtil;
 import com.zhouyou.audio.util.Tools;

@@ -1,6 +1,6 @@
-package com.zhouyou.audio.protocol;
+package com.zhouyou.audio.demo.protocol;
 
-import static com.zhouyou.audio.protocol.SkinTestingProtocol.ProtocolInfo.AUDIO_HEAD_LENGTH;
+import static com.zhouyou.audio.demo.protocol.SkinTestingProtocol.ProtocolInfo.AUDIO_HEAD_LENGTH;
 
 
 /**

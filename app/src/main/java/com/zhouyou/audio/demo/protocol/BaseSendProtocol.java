@@ -1,4 +1,4 @@
-package com.zhouyou.audio.protocol;
+package com.zhouyou.audio.demo.protocol;
 
 import com.zhouyou.audio.util.AudioLog;
 import com.zhouyou.audio.util.CRCUtil;
@@ -6,8 +6,8 @@ import com.zhouyou.audio.util.Tools;
 
 import java.nio.ByteBuffer;
 
-import static com.zhouyou.audio.protocol.SkinTestingProtocol.ProtocolInfo.AUDIO_HEAD_LENGTH;
-import static com.zhouyou.audio.protocol.SkinTestingProtocol.ProtocolInfo.PROCOTOL_CRC_LENGTH;
+import static com.zhouyou.audio.demo.protocol.SkinTestingProtocol.ProtocolInfo.AUDIO_HEAD_LENGTH;
+import static com.zhouyou.audio.demo.protocol.SkinTestingProtocol.ProtocolInfo.PROCOTOL_CRC_LENGTH;
 
 /**
  * <p>描述：发送命令的基类</p>

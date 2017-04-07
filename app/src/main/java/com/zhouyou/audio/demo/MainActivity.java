@@ -12,9 +12,9 @@ import com.zhouyou.audio.RxAudio;
 import com.zhouyou.audio.base.ICallBack;
 import com.zhouyou.audio.decoder.DecoderResult;
 import com.zhouyou.audio.decoder.IDecoderCallBack;
-import com.zhouyou.audio.protocol.SingleSendProtocol;
-import com.zhouyou.audio.protocol.SkinTestingProtocol;
-import com.zhouyou.audio.receiver.HeadsetPlugReceiver;
+import com.zhouyou.audio.demo.protocol.SingleSendProtocol;
+import com.zhouyou.audio.demo.protocol.SkinTestingProtocol;
+import com.zhouyou.audio.demo.receiver.HeadsetPlugReceiver;
 import com.zhouyou.audio.util.AudioLog;
 import com.zhouyou.audio.util.Tools;
 

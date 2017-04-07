@@ -1,4 +1,4 @@
-package com.zhouyou.audio.protocol;
+package com.zhouyou.audio.demo.protocol;
 
 /**
  * <p>描述：发送单个字节到设备</p>

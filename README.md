@@ -1,5 +1,4 @@
-## RxAudio
-
+# RxAudio
 基于Rxjava实现的android音频库,主要用于手机和音频设备之间通信，支持录音、发送、供电、发送失败自动重试（可以指定重试次数），设置接收超时、自定义编解码，自定义配置参数等功能，使用本库只需要关注与业务相关的自定义编解码。
 ## 版本说明
 
@@ -117,12 +116,12 @@ rxAudio.send(bytes, new ICallBack() {
 });
 ```
 *注：发送回调监听，在setReceiveCallBack全局监听中也可以收到消息。*
-##音频退出
+## 音频退出
 在应用退出时调用
 ```
 rxAudio.exitAudio();
 ```
-#### 编解码使用方式
+## 编解码使用方式
 全局设置
 ```
 RxAudio.init(new RxAudio.AudioConfig()
@@ -136,7 +135,7 @@ rxAudio.setAbstractDecoder(new FSKDecoderData());//设置解码
 rxAudio.setAudioEncoder(new EncoderData());//设置解码
 ```
 
-#### 自定义解码
+## 自定义解码
 
 本库中默认采用FSKDecoderData解码，如果需要自定义实现解码需要继承AbstractDecoder类
 
@@ -241,7 +240,6 @@ mSuply.stop()
 ```
 录音AudioRecorder类
 ```
-
 AudioRecorder recorder = new AudioRecorder.Builder()
 .reate(8000)
 .audioEncoding(AudioFormat.ENCODING_PCM_16BIT)
@@ -278,83 +276,79 @@ RxAudio rxAudio = RxAudio.getInstance();
 
 #### 功能介绍
 
-初始化配置
-
+#### 初始化配置
 ```
 RxAudio.init(AudioConfig config);
 ```
-
-开启录音
-
+#### 开启录音
 ```
 rxAudio.startRecord();
 ```
-
-关闭录音
+#### 关闭录音
 
 ```
 rxAudio.stopRecord();
 ```
 
-开启供电
+#### 开启供电
 ```
 rxAudio.startPower();
 ```
 
-关闭供电
+#### 关闭供电
 
 ```
 rxAudio.stopPower();
 ```
 
-设置编码
+#### 设置编码
 
 ```
 rxAudio.setAudioEncoder(RxAudioPlayer.IAudioEncoder audioEncoder);
 ```
 
-设置解码
+#### 设置解码
 
 ```
 rxAudio.setAbstractDecoder(AbstractDecoder abstractDecoder);
 ```
 
-设置监听回调
+#### 设置监听回调
 
 ```
 rxAudio.setReceiveCallBack(IDecoderCallBack callBack);
 ```
 
-设置供电频率
+#### 设置供电频率
 
 ```
 rxAudio.setPowerRate(int sin_rate);//默认21KHZ,不用设置
 ```
 
-发送命令给设备，不需要响应
+#### 发送命令给设备，不需要响应
 
 ```
 rxAudio.send(final byte[] datas) ;
 ```
-发送命令给设备，并且等待设备回应接收数据
+#### 发送命令给设备，并且等待设备回应接收数据
 
 ```
 rxAudio.send(final byte[] datas, final ICallBack callBack)
 ```
 
-取消发送
+#### 取消发送
 
 ```
 rxAudio.cancleSend() ;
 ```
 
-退出音频
+#### 退出音频
 
 ```
 rxAudio.exitAudio();
 ```
 
-自定义供电配置
+#### 自定义供电配置
 
 ```
 PowerSupply.Builder mPowerBuilder = new PowerSupply.Builder().sampleRate(48000)
@@ -365,7 +359,7 @@ PowerSupply.Builder mPowerBuilder = new PowerSupply.Builder().sampleRate(48000)
 RxAudio.init(new RxAudio.AudioConfig().powerBuilder(mPowerBuilder));
 ```
 
-自定义录音配置
+#### 自定义录音配置
 
 ```
 AudioRecorder.Builder mRecorderBuilder = new AudioRecorder.Builder().reate(44100)
@@ -374,7 +368,7 @@ AudioRecorder.Builder mRecorderBuilder = new AudioRecorder.Builder().reate(44100
                 .channelConfiguration(AudioFormat.CHANNEL_CONFIGURATION_MONO);
 RxAudio.init(new RxAudio.AudioConfig().recordBuilder(mRecorderBuilder));
 ```
-自定义发送配置
+#### 自定义发送配置
 
 ```
 RxAudioPlayer.Builder mAudioPlayerBuilder = new RxAudioPlayer.Builder().streamType(AudioManager.STREAM_MUSIC)
@@ -386,7 +380,7 @@ RxAudioPlayer.Builder mAudioPlayerBuilder = new RxAudioPlayer.Builder().streamTy
 RxAudio.init(new RxAudio.AudioConfig().trackBuilder(mAudioPlayerBuilder));
 ```
 
-RxAudio默认配置参数介绍：
+#### RxAudio默认配置参数介绍：
 
 ```
 //默认录音配置
@@ -401,7 +395,6 @@ mPowerBuilder = new PowerSupply.Builder().sampleRate(48000)//设置采样率
         .audioFormat(AudioFormat.ENCODING_PCM_16BIT)
         .channel(Channel.RIGHT)//左声道供电
         .powerRate(20050);//设置输出21KHZ正玄波频率 VIVO手机不能设置成21050否则驱动不了电池
-
 //默认发送配置
 mAudioPlayerBuilder = new RxAudioPlayer.Builder().streamType(AudioManager.STREAM_MUSIC)//设置类型
         .rate(8000)//设置采样率
@@ -409,13 +402,12 @@ mAudioPlayerBuilder = new RxAudioPlayer.Builder().streamType(AudioManager.STREAM
         .audioFormat(AudioFormat.ENCODING_PCM_16BIT)
         .channel(Channel.LEFT)//左声道通信
         .mode(AudioTrack.MODE_STATIC);
-
 ```
 注：这些参数不需要关系，RxAudio默认已经设置了，如果需要自定义可以设置Builder.
 
 ## Demo效果预览
 ![](http://img.blog.csdn.net/20170407170949970)
-##项目应用效果预览
+## 项目应用效果预览
 ![](http://img.blog.csdn.net/20170407172312631)
 
 ## 重点说明

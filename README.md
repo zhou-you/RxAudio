@@ -1,14 +1,6 @@
 # RxAudio
 基于Rxjava实现的android音频库,主要用于手机和音频设备之间通信，支持录音、发送、供电、发送失败自动重试（可以指定重试次数），设置接收超时、自定义编解码，自定义配置参数等功能，使用本库只需要关注与业务相关的自定义编解码。
 
-## 联系方式
-邮箱地址： 478319399@qq.com
-QQ群： 581235049（建议使用QQ群，邮箱使用较少，可能看的不及时）
-本群旨在为使用我的[github](https://github.com/zhou-you)项目的人提供方便，如果遇到问题欢迎在群里提问。一个人的能力也有限，希望一起学习一起进步。
-关注我的[github](https://github.com/zhou-you)，了解我的最新项目。关注我的[博客](http://blog.csdn.net/zhouy478319399)，阅读我的最新文章。
-#####欢迎加入QQ交流群
-![](http://img.blog.csdn.net/20170601165330238?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhvdXk0NzgzMTkzOTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
-
 ## 版本说明
 
 #### 当前版本
@@ -427,6 +419,13 @@ mAudioPlayerBuilder = new RxAudioPlayer.Builder().streamType(AudioManager.STREAM
 ## 其它
 如果想深入了解基于FFT的解码以及兼容、注意事项、供电、发送等原理，后期会在CSDN上发表博客，敬请期待！！
 
+## 联系方式
+邮箱地址： 478319399@qq.com
+QQ群： 581235049（建议使用QQ群，邮箱使用较少，可能看的不及时）
+本群旨在为使用我的[github](https://github.com/zhou-you)项目的人提供方便，如果遇到问题欢迎在群里提问。一个人的能力也有限，希望一起学习一起进步。
+关注我的[github](https://github.com/zhou-you)，了解我的最新项目。关注我的[博客](http://blog.csdn.net/zhouy478319399)，阅读我的最新文章。
+#####欢迎加入QQ交流群
+![](http://img.blog.csdn.net/20170601165330238?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhvdXk0NzgzMTkzOTk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
 
 
 

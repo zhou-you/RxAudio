@@ -423,6 +423,7 @@ mAudioPlayerBuilder = new RxAudioPlayer.Builder().streamType(AudioManager.STREAM
 邮箱地址： 478319399@qq.com
 QQ群： 581235049（建议使用QQ群，邮箱使用较少，可能看的不及时）
 本群旨在为使用我的[github](https://github.com/zhou-you)项目的人提供方便，如果遇到问题欢迎在群里提问。一个人的能力也有限，希望一起学习一起进步。
+
 关注我的[github](https://github.com/zhou-you)，了解我的最新项目。关注我的[博客](http://blog.csdn.net/zhouy478319399)，阅读我的最新文章。
 
 #### 欢迎加入QQ交流群

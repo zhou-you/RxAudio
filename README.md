@@ -6,7 +6,7 @@
 ## 项目应用效果预览
 ![](http://img.blog.csdn.net/20170407172312631)
 ## 示波器-波形图（信号传输调制）
-![](https://github.com/zhou-you/RxAudio/raw/master/screenshot/1.jpg)
+![](https://github.com/zhou-you/RxAudio/raw/master/screenshot/1.jpg)![](https://raw.githubusercontent.com/zhou-you/RxAudio/master/screenshot/2.jpg)
 
 ## 版本说明
 

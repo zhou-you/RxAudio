@@ -424,11 +424,17 @@ mAudioPlayerBuilder = new RxAudioPlayer.Builder().streamType(AudioManager.STREAM
 
 ## 音频资料学习推荐
 [http://blog.csdn.net/ct872587129/article/details/44646881](http://blog.csdn.net/ct872587129/article/details/44646881)
+
 [http://www.voidcn.com/article/p-pxvkdqst-ca.html  ](http://www.voidcn.com/article/p-pxvkdqst-ca.html )
+
 [了解FFT和信号加窗  http://www.ni.com/white-paper/4844/zhs/]( http://www.ni.com/white-paper/4844/zhs/)
+
 [https://daily.zhihu.com/story/3935067](https://daily.zhihu.com/story/3935067)
+
 [https://daily.zhihu.com/story/3939307](https://daily.zhihu.com/story/3939307)
+
 [http://m.blog.csdn.net/kc87654321/article/details/52803649](http://m.blog.csdn.net/kc87654321/article/details/52803649)
+
 [http://www.myexception.cn/android/2102828.html](http://www.myexception.cn/android/2102828.html)
 
 

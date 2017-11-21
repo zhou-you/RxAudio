@@ -1,6 +1,13 @@
 # RxAudio
 本库是一款基于Rxjava实现的android音频设备通信库,主要用于手机和音频设备之间通信，支持录音、发送、供电、发送失败自动重试（可以指定重试次数），设置接收超时、自定义编解码，自定义配置参数等功能，使用本库只需要关注与业务相关的自定义编解码。
 
+## Demo效果预览
+![](http://img.blog.csdn.net/20170407170949970)
+## 项目应用效果预览
+![](http://img.blog.csdn.net/20170407172312631)
+## 示波器-波形图（信号传输调制）
+![](https://github.com/zhou-you/RxAudio/raw/master/screenshot/1.jpg)
+
 ## 版本说明
 
 #### 当前版本
@@ -405,11 +412,6 @@ mAudioPlayerBuilder = new RxAudioPlayer.Builder().streamType(AudioManager.STREAM
         .mode(AudioTrack.MODE_STATIC);
 ```
 注：这些参数不需要关系，RxAudio默认已经设置了，如果需要自定义可以设置Builder.
-
-## Demo效果预览
-![](http://img.blog.csdn.net/20170407170949970)
-## 项目应用效果预览
-![](http://img.blog.csdn.net/20170407172312631)
 
 ## 重点说明
 - 本工程的Demo编解码都是空实现，因为编解码在其它app上已经商用，涉及到具体的业务通信安全，不对外开放，望理解！！！采用FSK，傅里叶FFT解码，能够兼容市场上主流手机80%以上，另外告知大家曼彻斯特的解码是行不通的（只有ios可以），勿走弯路，FFT才是正道（andoid和ios同时兼容），FFT同样也需要做兼容处理。
